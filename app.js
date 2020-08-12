@@ -35,6 +35,7 @@ io.on('connection', socket=>{
 
 
   socket.on('signal', data=>{
+    // prepare Radio
     const radio=new rf.nRF24(24,0);
   radio.begin();
   if(!radio.present()) {
